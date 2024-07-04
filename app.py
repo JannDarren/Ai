@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 import random
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Business Sentiment Lexicons (Sample)
 sentiment_words = {
@@ -65,5 +65,7 @@ def chat():
 
   return jsonify({"response": response})
 
-if _name_ == '_main_':
+if __name__ == '__main__':
   app.run(debug=True, port=8000)
+
+
